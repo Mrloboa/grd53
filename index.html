@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto GRD53</title>
-  <link-rel="icon" href="">
+  <link rel="icon" href="img/ic.ico">
     
   <style>
     :root {
@@ -111,23 +111,87 @@
         padding: 1em;
       }
     }
+    
+   
+    .header-container {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center; 
+      flex-wrap: wrap; 
+      padding: 20px;
+      gap: 20px;
+      background-color: #f8f9fa; 
+    }
+
+   
+    .header-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .header-info h1 {
+      margin-top: 0;
+      
+    }
+
+    
+    .header-info nav a {
+      margin-right: 15px;
+      text-decoration: none;
+    
+      font-weight: bold;
+    }
+
+    .header-info nav a:hover {
+      text-decoration: underline;
+    }
+
+    
+    .header-logo img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-logo {
+        order: -1; 
+        margin-bottom: 15px;
+      }
+
+      .header-info nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+    }
+  
   </style>
 </head>
 <body>
 
-<header>
-<img src="https://ih1.redbubble.net/image.5302526476.3587/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="SENA">
-  
-  <h1>Gestión en Redes de Datos</h1>
-  <p>Calidad, Seguridad y Compromiso en cada proyecto</p>
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#galeria">Galería</a>
-    <a href="#porqueelegirnos">¿Por qué elegirnos?</a>
-    <a href="#contacto">Plataforma</a>
-  </nav>
-</header>
+<header class="header-container">
+    <div class="header-info">
+      <h1>Gestión en Redes de Datos</h1>
+      <p>Calidad, Seguridad y Compromiso en cada proyecto</p>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#porqueelegirnos">¿Por qué elegirnos?</a>
+        <a href="#contacto">Plataforma</a>
+      </nav>
+    </div>
+    
+    <div class="header-logo">
+      <img src="img/log.png" alt="SENA">
+    </div>
+  </header>
 
 <section id="servicios">
   <h2>Servicios</h2>
@@ -159,10 +223,10 @@
   <h2>Galería de Trabajos</h2>
   <p>Conoce parte de nuestro portafolio:</p>
   <div class="galeria">
-    <img src="https://via.placeholder.com/400x300?text=Proyecto+1" alt="Proyecto 1" />
-    <img src="https://via.placeholder.com/400x300?text=Proyecto+2" alt="Proyecto 2" />
-    <img src="https://via.placeholder.com/400x300?text=Proyecto+3" alt="Proyecto 3" />
-    <img src="https://via.placeholder.com/400x300?text=Proyecto+4" alt="Proyecto 4" />
+    <img src="/Users/loboa/Desktop/pag_proyecto/img/i1.jpeg" alt="Proyecto 1" />
+    <img src="/Users/loboa/Desktop/pag_proyecto/img/i2.jpeg" alt="Proyecto 2" />
+    <img src="/Users/loboa/Desktop/pag_proyecto/img/i3.jpeg" alt="Proyecto 3" />
+    <img src="/Users/loboa/Desktop/pag_proyecto/img/i4.jpeg" alt="Proyecto 4" />
   </div>
 </section>
 
@@ -241,4 +305,3 @@
 
 </body>
 </html>
-
