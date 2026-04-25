@@ -1,23 +1,240 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>gato</title>
-<style type="text/css">
-body {
-	background-image: url(BOS.jpg);
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto GRD53</title>
+  <style>
+    :root {
+      --color-principal: #00aa2b;
+      --color-secundario: #f5f7fa;
+      --color-acento: #ffc107;
+      --color-texto: #333;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--color-secundario);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--color-principal), #003f7d);
+      color: white;
+      padding: 2.5em 1em;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+    nav a {
+      color: var(--color-acento);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5em;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 193, 7, 0.1);
+      border-radius: 5px;
+    }
+    section {
+      padding: 3em 1em;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--color-principal);
+      border-left: 6px solid var(--color-acento);
+      padding-left: 10px;
+      margin-bottom: 1em;
+    }
+    .servicio {
+      background: white;
+      margin: 1.5em 0;
+      padding: 1.5em;
+      border-left: 6px solid var(--color-principal);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .servicio:hover {
+      transform: translateY(-3px);
+    }
+    ul {
+      list-style: disc;
+      padding-left: 2em;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 2em;
+    }
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    .galeria img:hover {
+      transform: scale(1.04);
+    }
+  
+    footer {
+      background: #1f1f1f;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.95em;
+    }
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .servicio {
+        padding: 1em;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body onclick="playaudio()">
-<img src="animales/gato.png" width="500" height="500" align="left" /><h1>&nbsp;</h1>
-<h1>Un gato es un animal pequeño y peludo que a muchas personas les gusta tener como mascota, tiene cuatro patas, una cola larga y bigotes en su cara. Los gatos suelen decir &quot;miau&quot; y les encanta ronronear y dormir mucho.</h1>
-<audio id="music" src="audio/gatos.mp3"controls></audio>
-<script>
-  function playaudio(){
-    document.getElementById("music"). play()
+<header>
+  <h1>Gestión en Redes de Datos</h1>
+  <p>Calidad, Seguridad y Compromiso en cada proyecto</p>
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#porqueelegirnos">¿Por qué elegirnos?</a>
+    <a href="#contacto">Plataforma</a>
+  </nav>
+</header>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="servicio">
+    <h3>Visión general</h3>
+    <p>Hoy en día, el éxito empresarial depende en gran medida de una excelente administración de sus redes de datos. Entendiendo esta alta demanda tecnológica, el SENA presenta su programa de Tecnólogo en Gestión de Redes de Datos en Colombia. Su objetivo es preparar expertos capacitados para operar y dar mantenimiento a las infraestructuras de comunicación, garantizando siempre el máximo rendimiento y la protección de la información corporativa.</p>
+  </div>
+  <div class="servicio">
+    <h3>Que hacemos ?</h3>
+    <p>Un Tecnólogo en Gestión de Redes de Datos es el talento experto detrás del diseño, implementación y mantenimiento de las comunicaciones digitales. Su misión va mucho más allá de conectar dispositivos: se encarga de administrar servidores, gestionar sistemas operativos y blindar la información con las mejores estrategias de ciberseguridad. En pocas palabras, es una pieza clave en el motor tecnológico de cualquier empresa, asegurando que las comunicaciones fluyan de manera rápida, constante y 100% segura.</p>
+  </div>
+  <div class="servicio">
+    <h3>Información</h3>
+    <p>Si está interesado en cursar esta carrera tecnológica y potenciar su perfil profesional, le invitamos a dirigirse al siguiente enlace para más información: <a href="https://zajuna-sena-edu.co/curso/tecnologo-en-gestion-de-redes-de-datos/#google_vignette" target="_blank">https://www.Gestion_en_redes.edu.co</a></p>
+  </div>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos Recientes</h2>
+  <ul>
+    <li>Configuracion e instalacion de equipos cisco</li>
+    <li>Mantenimiento general de equipos de red </li>
+    <li>Instalacion enfraestructura de cableado estructurado 
+    </li>
+  </ul>
+</section>
+
+<section id="galeria">
+  <h2>Galería de Trabajos</h2>
+  <p>Conoce parte de nuestro portafolio:</p>
+  <div class="galeria">
+    <img src="https://via.placeholder.com/400x300?text=Proyecto+1" alt="Proyecto 1" />
+    <img src="https://via.placeholder.com/400x300?text=Proyecto+2" alt="Proyecto 2" />
+    <img src="https://via.placeholder.com/400x300?text=Proyecto+3" alt="Proyecto 3" />
+    <img src="https://via.placeholder.com/400x300?text=Proyecto+4" alt="Proyecto 4" />
+  </div>
+</section>
+
+<section id="porqueelegirnos">
+  <h2>¿Por qué elegirnos?</h2>
+  <ul>
+    <li>El perfil profesional de un Tecnólogo en Gestión de Redes de Datos es bastante amplio y abarca diversas habilidades y conocimientos técnicos, así como capacidades de gestión y análisis.</li>
+  </ul>
+</section>
+
+<section id="contacto">
+  <h2>Plataforma</h2>
+  <p>Tu comunidad, tu pasión, tu carrera. Todo en un solo lugar.</p>
+  <a href="https://grdmoodle.dpdns.org/" class="btn-carrera">Ingresa</a>
+
+
+  
+</section>
+
+
+
+<footer>
+  <p>© 2026 Gestión en Redes de Datos. Todos los derechos reservados.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<style>
+  .btn-carrera {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-</script>
+
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+ 
+  .btn-carrera:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+  }
+
+ 
+  .btn-carrera:active {
+    transform: translateY(-1px);
+  }
+</style>
+
+
+
+
 </body>
 </html>
+
